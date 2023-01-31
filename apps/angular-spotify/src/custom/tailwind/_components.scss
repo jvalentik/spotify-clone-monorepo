@@ -1,0 +1,74 @@
+@layer components {
+  .content-spacing {
+    @apply px-8 pt-4;
+  }
+
+  .text-heading {
+    @apply text-2xl text-white;
+  }
+  
+  .text-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    user-select: none;
+    @apply overflow-hidden whitespace-normal text-sm text-white text-opacity-50;
+  }
+
+  .ellipsis-one-line {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: unset;
+    word-break: break-all;
+    overflow: hidden;
+    user-select: none;
+  }
+
+  .control-button {
+    color: #b3b3b3;
+    position: relative;
+    @apply w-8 h-8 flex items-center justify-center cursor-pointer;
+
+    &.large {
+      @apply w-12 h-12;
+    }
+  }
+
+  .playlist-tracks-grid {
+    display: grid;
+    grid-template-columns: [index] 24px [first] 6fr [var1] 4fr [var2] 3fr [last] minmax(120px, 1fr);
+    gap: 16px;
+  }
+
+  .album-tracks-grid {
+    display: grid;
+    grid-template-columns: 24px 6fr minmax(120px, 1fr);
+    gap: 16px;
+  }
+
+  .artist-top-tracks-grid {
+    display: grid;
+    grid-template-columns: 24px 6fr 3fr minmax(120px, 1fr);
+    gap: 16px;
+  }
+
+  .track-row {
+    &:hover {
+      .track-order {
+        display: none;
+      }
+  
+      .track-play-button {
+        display: block;
+      }
+    }
+  }  
+
+  .common-grid {
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    @apply grid;
+  }
+}

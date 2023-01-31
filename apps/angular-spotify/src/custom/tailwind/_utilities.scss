@@ -1,0 +1,13 @@
+@layer utilities {
+  .link-subtle {
+    color: #b3b3b4;
+
+    &:hover {
+      @apply text-white;
+    }
+  }
+
+  .no-select {
+    user-select: none;
+  }
+}

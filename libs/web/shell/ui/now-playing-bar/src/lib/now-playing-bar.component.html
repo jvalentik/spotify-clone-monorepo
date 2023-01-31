@@ -1,0 +1,15 @@
+<footer class="now-playing-bar-container">
+  <div class="now-playing-bar-left">
+    <as-track-current-info *ngIf="currentTrack$ | async as currentTrack"
+                           [track]="currentTrack">
+    </as-track-current-info>
+  </div>
+  <div class="now-playing-bar-center">
+    <as-player-controls></as-player-controls>
+    <as-player-playback></as-player-playback>
+  </div>
+  <div class="flex items-center justify-end">
+    <as-visualization-toggle class="mr-5"></as-visualization-toggle>
+    <as-player-volume></as-player-volume>
+  </div>
+</footer>

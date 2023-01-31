@@ -1,0 +1,15 @@
+<h2 class="mt-8 mb-4 text-heading">Recently Played</h2>
+
+<div *ngIf="recentTracks$ | async as recentTracks"
+     class="common-grid">
+  <as-media *ngFor="let historyObject of recentTracks"
+            [title]="historyObject.track.name"
+            [description]="historyObject.track.artists[0]?.name!"
+            [imageUrl]="historyObject.track.album.images[0]?.url!"
+            [routerUrl]="getAlbumUrl(historyObject.track.album.id)"
+            [uri]="historyObject.track.uri"
+            (togglePlay)="togglePlayTrack($event, historyObject.track.uri)">
+  </as-media>
+</div>
+<as-spinner *ngIf="isLoading$ | async">
+</as-spinner>

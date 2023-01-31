@@ -1,0 +1,11 @@
+:host {
+  @apply flex items-center;
+}
+
+.track-cover {
+  width: 40px;
+  display: flex;
+  flex-shrink: 0;
+  user-select: none;
+  @apply mr-4;
+}
