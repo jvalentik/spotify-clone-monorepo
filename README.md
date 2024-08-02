@@ -44,3 +44,6 @@ A simple Spotify client built with Angular 12, Nx workspace, ngrx, TailwindCSS a
 [album-art]: /libs/web/shared/assets/src/assets/readme/angular-spotify-album-art.gif
 [pwa]: /libs/web/shared/assets/src/assets/readme/angular-spotify-pwa.gif
 [web-player]: /libs/web/shared/assets/src/assets/readme/angular-spotify-web-player.png
+
+## RUN Today - Aug / 2024
+Use Node version 14.21.3
